@@ -9,3 +9,14 @@ const menu = document.querySelector(".navmenu__box");
 bar.addEventListener("click", () => {
   menu.classList.toggle("navmenu__box1");
 });
+const izbElements = document.querySelectorAll(".blutooths__img__izb");
+
+izbElements.forEach((izb1) => {
+  izb1.addEventListener("click", () => {
+    if (izb1.src.endsWith("izb.svg")) {
+      izb1.src = "./images/icons/Vector-izb-black.svg";
+    } else {
+      izb1.src = "./images/icons/izb.svg";
+    }
+  });
+});

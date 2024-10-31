@@ -38,6 +38,7 @@
 }
 body {
   background-color: var(--color-6);
+  color-scheme: light;
 }
 .container {
   max-width: 1110px;
@@ -46,11 +47,13 @@ body {
 nav {
   padding: 15px 10px;
 }
+
 .navmenu {
   display: flex;
   align-content: center;
   justify-content: space-between;
 }
+
 .navmenu__left__box__right__box {
   display: flex;
 }
@@ -152,10 +155,11 @@ nav {
 }
 .box1 {
   background-color: var(--color-7);
-  display: inline-block;
+  width: 350px;
   padding: 25px 100px 29px 100px;
   border-radius: 30px;
   margin-top: 20px;
+  box-shadow: 0px 0px 20px 0px #0000001a;
 }
 .box1__name {
   display: block;
@@ -166,25 +170,146 @@ nav {
   text-align: center;
 }
 .phones {
-  display: flex;
-  column-gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
-@media screen and (max-width: 960px) {
-  .phones {
-    display: inline-block;
+.blitooth {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.blutooths {
+  background-color: var(--color-7);
+  width: 350px;
+  padding: 15.35px 21px 32.69px 22px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 20px 0px #0000001a;
+}
+.blutooth__header {
+  display: block;
+  font-size: 20px;
+  line-height: 24.38px;
+  color: var(--color-2);
+  font-family: "Montserrat big";
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.blutooths__img {
+  display: flex;
+  align-items: start;
+  column-gap: 23.88px;
+}
+.blutooths__text__box {
+  margin-top: 54.45px;
+}
+.blutooths__name {
+  display: flex;
+  justify-content: space-between;
+}
+.blutooths__name__span {
+  font-size: 17px;
+  line-height: 20.72px;
+  font-family: "Montserrat big";
+}
+.blutooths__name__t {
+  display: flex;
+  flex-direction: column;
+}
+.blutooths__name__t__price {
+  font-size: 17px;
+  line-height: 20.72px;
+  font-family: "Montserrat big";
+  color: var(--color-4);
+}
+.blutooths__name__t__price1 {
+  font-size: 13px;
+  line-height: 15.85px;
+  color: #ffa442ab;
+  font-family: "Montserrat big";
+  text-decoration: line-through;
+}
+.blutooths__price {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.blutooths__price__price {
+  font-size: 17px;
+  line-height: 20.72px;
+  color: var(--color-2);
+  font-family: "Montserrat big";
+}
+.blutooths__name__t__price1__none {
+  display: none;
+}
+.blutooths__name__1 {
+  margin-bottom: 17px;
+}
+.blutooths__name__t__price__color {
+  color: var(--color-5);
+}
+.blutooths__name__t__price1__color {
+  text-decoration: line-through;
+  text-decoration-color: var(--color-5);
+  color: var(--color-2);
+}
+.blutooths__img__small {
+  margin-top: 57px;
+}
+.blutooths__img__izb {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1120px) {
+  .blitooth {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
+  .phones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 960px) {
   .box1 {
     margin: 20px auto 20px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-}
-@media screen and (max-width: 960px) {
   .img__box__img1 {
     width: 700px;
   }
 }
+@media screen and (max-width: 768px) {
+  .blitooth {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    max-width: 400px; /* yoki maksimal kenglik */
+    margin: 0 auto;
+  }
+  .phones {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+  .chehol {
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .blutooth__header {
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .img__box__img1 {
     width: 500px;
@@ -210,6 +335,7 @@ nav {
     opacity: 0;
     overflow-y: auto;
   }
+
   .navmenu__box1 {
     transform: translateX(0);
     transition: all 0.5s;
@@ -223,8 +349,5 @@ nav {
   }
   .navmenu__right {
     margin-top: 20px;
-  }
-  .navmenu__left__box__right__box__img1 path {
-    fill: var(--color-7);
   }
 }
