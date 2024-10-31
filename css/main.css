@@ -36,6 +36,29 @@
   --color-6: #eaeaea;
   --color-7: #fff;
 }
+:root {
+  --color-bg: #ffffff; /* Light mode background */
+  --color-text: #101010; /* Light mode text color */
+  --color-accent: #ffa542; /* Common accent color */
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a0;
+}
+
 body {
   background-color: var(--color-6);
   color-scheme: light;
@@ -118,7 +141,16 @@ nav {
   position: absolute;
   right: -10px;
   top: -8px;
+  background-color: var(--color-4);
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .navmenu__right {
   display: flex;
   column-gap: 35px;
@@ -186,7 +218,8 @@ nav {
   border-radius: 30px;
   box-shadow: 0px 0px 20px 0px #0000001a;
 }
-.blutooth__header {
+.blutooth__header,
+.earphone__header {
   display: block;
   font-size: 20px;
   line-height: 24.38px;
@@ -260,7 +293,66 @@ nav {
 .blutooths__img__izb {
   cursor: pointer;
 }
-
+.earphones {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+/* Footer */
+footer {
+  margin-top: 64px;
+}
+.footer {
+  display: flex;
+  column-gap: 174px;
+  background-color: var(--color-7);
+  padding: 29px 27px 32.28px 29px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.footer__left {
+  display: flex;
+  align-items: start;
+  column-gap: 233px;
+}
+.footer__right {
+  display: flex;
+  column-gap: 135px;
+}
+.footer__right__left {
+  display: flex;
+}
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10.7px;
+}
+.footer__menu__link {
+  font-size: 17px;
+  line-height: 20.72px;
+  color: var(--color-1);
+  font-family: "Montserrat small";
+}
+.footer__right__left__langs {
+  display: flex;
+  column-gap: 15px;
+}
+.footer__right__left {
+  display: flex;
+  flex-direction: column;
+  row-gap: 37.68px;
+}
+.footer__right__left__servise {
+  font-size: 17px;
+  line-height: 20.72px;
+  color: var(--color-1);
+  font-family: "Montserrat small";
+}
+.footer__socials {
+  display: flex;
+  align-items: start;
+  column-gap: 18.2px;
+}
 @media screen and (max-width: 1120px) {
   .blitooth {
     display: grid;
@@ -268,6 +360,11 @@ nav {
     gap: 30px;
   }
   .phones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .earphones {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
@@ -286,11 +383,18 @@ nav {
   }
 }
 @media screen and (max-width: 768px) {
+  .earphones {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
   .blitooth {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 30px;
-    max-width: 400px; /* yoki maksimal kenglik */
+    max-width: 400px;
     margin: 0 auto;
   }
   .phones {
@@ -298,12 +402,10 @@ nav {
     grid-template-columns: repeat(1, 1fr);
     gap: 30px;
   }
-  .chehol {
-    font-size: 40px;
-    line-height: 40px;
-    text-align: center;
-  }
-  .blutooth__header {
+
+  .blutooth__header,
+  .chehol,
+  .earphone__header {
     font-size: 40px;
     line-height: 40px;
     text-align: center;
@@ -342,7 +444,7 @@ nav {
     opacity: 1;
   }
   .navmenu__bar {
-    display: block;
+    display: flex;
   }
   .navmenu__left__box__right__box__link {
     color: var(--color-7);

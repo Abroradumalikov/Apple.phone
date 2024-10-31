@@ -1,0 +1,77 @@
+:root {
+  --color1: #fff;
+  --color2: #000000;
+  --color3: #1c1c27;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat small";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/montserrat-v26-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat normal";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/montserrat-v26-latin-500.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat big";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/montserrat-v26-latin-600.woff2") format("woff2");
+}
+.boxs__sevise1 {
+  background-color: var(--color1);
+  max-width: 1107px;
+  padding: 15px 31.57px 20px 29.46px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 20px 0px #0000001a;
+}
+.boxs__sevise1__header {
+  color: var(--color3);
+  font-size: 17px;
+  line-height: 20.72px;
+  font-family: "Montserrat big";
+}
+.boxs__sevise1__text {
+  max-width: 1031.24px;
+  font-size: 17px;
+  line-height: 20.72px;
+  color: var(--color2);
+  margin-top: 15px;
+  margin-left: 14.73px;
+  font-family: "Montserrat small";
+}
+.boxs1 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 33px;
+}
+.head__site {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  margin-top: 20px;
+}
+.head__site img {
+  width: 30px;
+  height: 20px;
+}
+.head__site a {
+  font-size: 17px;
+  line-height: 20.72px;
+  color: var(--color3);
+  font-family: "Montserrat normal";
+}
