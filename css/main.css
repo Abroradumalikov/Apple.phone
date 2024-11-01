@@ -201,6 +201,9 @@ nav {
   font-family: "Montserrat big";
   text-align: center;
 }
+.box1__img {
+  max-width: 275px;
+}
 .phones {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
